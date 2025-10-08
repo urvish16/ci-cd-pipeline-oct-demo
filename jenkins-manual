@@ -1,5 +1,6 @@
 pipeline {
-    agent anyenvironment {
+    agent any
+    environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials')
         IMAGE_NAME = 'urvishsoni16/ci-cd-jenkins-demo-app'
         IMAGE_TAG = "${env.BUILD_NUMBER}"
